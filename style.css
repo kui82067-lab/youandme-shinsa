@@ -272,12 +272,17 @@ footer {
     align-items: center;
     gap: 8px;
 }
-/* 모바일 화면(가로 600px 이하)일 때만 적용되는 스타일 */
+/* 모바일 화면(600px 이하)일 때만 적용되는 스타일 */
 @media (max-width: 600px) {
     .signboard-header {
-        min-height: 180px; 
+        /* 사진이 잘리지 않도록 높이를 더 낮춥니다 */
+        min-height: 100px; 
+        
+        /* cover 대신 contain을 쓰면 사진 전체가 꽉 차게 들어옵니다 */
+        background-size: contain; 
         background-position: center center;
-        /* 이 줄을 추가하면 모바일에서 사진이 영역에 맞춰 더 잘 나옵니다 */
-        background-size: cover; 
+        
+        /* 패딩을 줄여서 헤더 영역이 너무 커지지 않게 합니다 */
+        padding: 10px 20px;
     }
 }
