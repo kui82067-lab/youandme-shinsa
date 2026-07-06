@@ -24,19 +24,16 @@ body {
 
 /* 🖤 검정 바탕 + 흰색 글씨 간판 스타일 헤더 */
 .signboard-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('ChatGPT Image 2026년 7월 7일 오전 07_42_28.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('간판.png');
     
-    /* 1. 사진이 영역에 최대한 다 보이도록 cover 대신 contain을 써보세요 */
-    background-size: contain; 
-    
-    /* 2. 사진을 정중앙에 배치 */
-    background-position: center center; 
-    
+    /* 2116x743 비율에는 cover가 가장 좋습니다 */
+    background-size: cover; 
+    background-position: center center;
     background-repeat: no-repeat;
     
     border-bottom: 2px solid #333333;
     
-    /* 3. 높이를 조금 더 확보하여 사진이 안 잘리게 합니다 */
+    /* 높이를 300px 정도로 잡으면 아주 시원하게 보입니다 */
     min-height: 300px; 
     
     padding: 20px;
