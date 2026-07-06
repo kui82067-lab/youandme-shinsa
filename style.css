@@ -277,3 +277,10 @@ footer {
     align-items: center;
     gap: 8px;
 }
+/* 모바일 화면(가로 600px 이하)일 때만 적용되는 스타일 */
+@media (max-width: 600px) {
+    .signboard-header {
+        min-height: 180px; 
+        background-position: center center;
+    }
+}
