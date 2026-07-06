@@ -1,0 +1,163 @@
+/* 전체 배경: 가라오케 느낌의 어두운 보라색 */
+body {
+    background-color: #0b0713;
+    color: #e0e0e0;
+    font-family: 'Malgun Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+
+/* 청소년 출입금지 경고창 */
+.age-warning {
+    background: linear-gradient(90deg, #d32f2f, #f44336);
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+}
+
+/* 상단 헤더: 네온 핑크 로고 + 황금색 전화버튼 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(20, 13, 35, 0.9);
+    border-bottom: 1px solid #2b1b46;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    color: #ff007f;
+    text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f;
+}
+
+.btn-call {
+    background: linear-gradient(135deg, #ffd700, #ffa500);
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    transition: 0.3s;
+}
+
+/* 메인 비주얼 섹션 */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(11, 7, 19, 0.85), rgba(11, 7, 19, 0.95)), 
+                url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1200'); /* 고급스러운 조명 이미지 */
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h2 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.hero h2 strong {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.btn-kakao {
+    background-color: #fee500;
+    color: #221212;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* 컨텐츠 섹션 공통 스타일 */
+section {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section h3 {
+    font-size: 20px;
+    color: #00ffff;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+    border-left: 4px solid #00ffff;
+    padding-left: 12px;
+    margin-bottom: 20px;
+}
+
+/* 정찰제 카드 스타일 */
+.price-card {
+    background-color: #160f24;
+    border: 1px solid #3d2763;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.price-card h4 {
+    font-size: 18px;
+    margin-top: 0;
+    color: #fff;
+}
+
+.price {
+    font-size: 24px;
+    color: #ffd700;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.desc {
+    color: #a095b5;
+    font-size: 14px;
+}
+
+/* 강조 알림 박스 */
+.event-box {
+    background: rgba(255, 0, 127, 0.05);
+    border: 1px dashed #ff007f;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    color: #ff80bf;
+    font-size: 14px;
+}
+
+/* 위치 및 영업 정보 */
+.info p {
+    background-color: #110b1c;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    border: 1px solid #1f1433;
+}
+
+.info strong {
+    color: #00ffff;
+    margin-right: 5px;
+}
+
+/* 하단 푸터 */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #554b68;
+    font-size: 12px;
+    border-top: 1px solid #1a102a;
+    margin-top: 60px;
+}
