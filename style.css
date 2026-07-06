@@ -22,18 +22,17 @@ body {
     font-weight: bold;
 }
 
-/* 🖤 검정 바탕 + 흰색 글씨 간판 스타일 헤더 */
 .signboard-header {
+    width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('간판.png');
     
-    /* 2116x743 비율에는 cover가 가장 좋습니다 */
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat;
     
     border-bottom: 2px solid #333333;
     
-    /* 높이를 300px 정도로 잡으면 아주 시원하게 보입니다 */
+    /* PC에서는 고정 높이, 모바일에서는 미디어 쿼리가 덮어씁니다 */
     min-height: 300px; 
     
     padding: 20px;
