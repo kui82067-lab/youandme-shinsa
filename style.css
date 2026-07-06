@@ -321,5 +321,10 @@ img {
     -moz-user-drag: none;
     -o-user-drag: none;
     user-drag: none;
-    pointer-events: none; /* 이미지를 직접 클릭/선택하는 것을 막음 */
+    /* pointer-events: none;  <-- 이 줄을 지우거나 주석 처리하세요 */
+}
+
+/* 슬라이더 내 이미지는 드래그가 가능하게 보장 */
+.slider img {
+    pointer-events: auto;
 }
