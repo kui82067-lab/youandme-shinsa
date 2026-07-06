@@ -259,3 +259,17 @@ footer {
     border-top: 1px solid #1c152b;
     margin-top: 60px;
 }
+/* 전화 문의 버튼 스타일 추가 */
+.btn-tel {
+    background-color: #ffffff; /* 흰색 바탕 */
+    color: #000000;           /* 검은 글씨 */
+    padding: 14px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
