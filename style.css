@@ -26,17 +26,20 @@ body {
 .signboard-header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('유앤미500.png');
     
-    /* 가로는 100% 꽉 채우고, 세로는 이미지 비율에 맞춰 자동으로 조절됨 */
-    background-size: 100% auto; 
+    /* 1. cover로 돌려놓습니다 (찌그러짐 방지) */
+    background-size: cover; 
     
-    background-position: center;     
+    /* 2. 사진의 윗부분을 기준으로 보여줍니다 */
+    background-position: top center; 
+    
     background-repeat: no-repeat;
     
     border-bottom: 2px solid #333333;
     
-    /* 높이를 지정하지 않거나, padding으로 원하는 만큼의 여백만 확보 */
-    padding: 60px 20px; 
+    /* 3. 높이를 살짝 키워주면 사진이 더 많이 보입니다 */
+    min-height: 250px; 
     
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
