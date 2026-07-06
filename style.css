@@ -282,5 +282,7 @@ footer {
     .signboard-header {
         min-height: 180px; 
         background-position: center center;
+        /* 이 줄을 추가하면 모바일에서 사진이 영역에 맞춰 더 잘 나옵니다 */
+        background-size: cover; 
     }
 }
