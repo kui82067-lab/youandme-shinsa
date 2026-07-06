@@ -24,15 +24,20 @@ body {
 
 /* 🖤 검정 바탕 + 흰색 글씨 간판 스타일 헤더 */
 .signboard-header {
-    /* 기존 '유앤미500.png'를 아래 파일명으로 변경하세요 */
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('ChatGPT Image 2026년 7월 7일 오전 07_42_28.png');
     
-    background-size: cover; 
-    background-position: top center; 
+    /* 1. 사진이 영역에 최대한 다 보이도록 cover 대신 contain을 써보세요 */
+    background-size: contain; 
+    
+    /* 2. 사진을 정중앙에 배치 */
+    background-position: center center; 
+    
     background-repeat: no-repeat;
     
     border-bottom: 2px solid #333333;
-    min-height: 250px; 
+    
+    /* 3. 높이를 조금 더 확보하여 사진이 안 잘리게 합니다 */
+    min-height: 300px; 
     
     padding: 20px;
     display: flex;
@@ -272,17 +277,18 @@ footer {
     align-items: center;
     gap: 8px;
 }
-/* 모바일 화면(600px 이하)일 때만 적용되는 스타일 */
+/* 모바일 화면(600px 이하)일 때 */
 @media (max-width: 600px) {
     .signboard-header {
-        /* 사진이 잘리지 않도록 높이를 더 낮춥니다 */
-        min-height: 100px; 
+        /* 높이를 고정하지 않고 비율로 자동 조절하게 함 */
+        min-height: auto;
+        aspect-ratio: 2 / 1; 
         
-        /* cover 대신 contain을 쓰면 사진 전체가 꽉 차게 들어옵니다 */
-        background-size: contain; 
+        /* 사진이 영역에 꽉 차게 보이도록 설정 */
+        background-size: cover;
         background-position: center center;
         
-        /* 패딩을 줄여서 헤더 영역이 너무 커지지 않게 합니다 */
-        padding: 10px 20px;
+        /* 모바일용 패딩 조정 */
+        padding: 10px;
     }
 }
