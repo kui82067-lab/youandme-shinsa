@@ -25,14 +25,14 @@ body {
 /* 🖤 검정 바탕 + 흰색 글씨 간판 스타일 헤더 */
 .signboard-header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('유앤미500.png');
-    background-size: cover;          /* 영역을 꽉 채우되 비율 유지 */
+    background-size: contain;         /* 영역을 꽉 채우되 비율 유지 */
     background-position: center;     /* 사진의 중심부를 보여줌 */
     background-repeat: no-repeat;
     
     border-bottom: 2px solid #333333;
     
     /* 높이를 고정해서 너무 커지지 않게 함 */
-    min-height: 200px; 
+    min-height: 120px; 
     padding: 20px;
     
     display: flex;
