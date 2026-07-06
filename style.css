@@ -22,26 +22,26 @@ body {
     font-weight: bold;
 }
 
+/* 1. 헤더 수정 (오른쪽 하단 정렬을 위한 설정) */
 .signboard-header {
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('간판.png');
-    
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat;
-    
     border-bottom: 2px solid #333333;
-    
-    /* PC에서는 고정 높이, 모바일에서는 미디어 쿼리가 덮어씁니다 */
     min-height: 300px; 
-    
     padding: 20px;
+    
+    /* 여기서 align-items를 flex-end로 바꾸어 로고와 버튼을 아래로 붙입니다 */
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end; 
+    
     position: sticky;
     top: 0;
     z-index: 100;
+}
 }
 .logo-sign {
     display: flex;
@@ -77,12 +77,15 @@ body {
     align-items: center;
     gap: 6px;
     transition: transform 0.2s;
+    
+    /* 오른쪽 하단 구석으로 정렬 */
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 .btn-call:active {
     transform: scale(0.95);
 }
-
 /* 메인 인트로 (Hero) */
 .hero {
     background: linear-gradient(rgba(11, 7, 19, 0.85), rgba(11, 7, 19, 0.95)), url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1000') no-repeat center center/cover;
