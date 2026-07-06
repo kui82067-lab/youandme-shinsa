@@ -22,11 +22,16 @@ body {
     font-weight: bold;
 }
 
-/* 🖤 검정 바탕 + 흰색 글씨 간판 스타일 헤더 */
+/* 🖤 검정 바탕 + 흰색 글씨 간판 스타일 헤더 (수정됨) */
 .signboard-header {
-    background-color: #000000; /* 리얼 블랙 간판 바탕 */
+    /* 기존 background-color를 삭제하고 아래 한 줄 추가 */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('유앤미500.png');
+    background-size: cover;          /* 사진이 영역을 꽉 채우도록 */
+    background-position: center;     /* 사진 중앙 정렬 */
+    background-repeat: no-repeat;
+    
     border-bottom: 2px solid #333333;
-    padding: 15px 20px;
+    padding: 60px 20px;              /* 높이를 키워 사진이 잘 보이게 함 */
     display: flex;
     justify-content: space-between;
     align-items: center;
