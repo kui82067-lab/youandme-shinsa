@@ -21,6 +21,15 @@ phoneLinks.forEach((link) => {
   }
 });
 
+const introSection = document.querySelector(".intro");
+if (introSection) {
+  introSection.insertAdjacentHTML("afterend", `
+    <section class="karaoke-story"><div class="wrap karaoke-grid">
+      <div><p class="overline">KARAOKE EXPERIENCE</p><h2>노래와 대화가<br>자연스럽게 이어지는 시간</h2></div>
+      <div class="karaoke-copy"><p>신사 유앤미는 독립된 룸에서 노래와 음악을 편안하게 즐기는 프라이빗 가라오케입니다. 혼자 방문하는 자리부터 친구 모임, 비즈니스와 단체 회식까지 목적에 맞는 공간을 예약제로 안내합니다.</p><ul><li><b>PRIVATE KARAOKE</b><span>다른 일행과 분리된 독립형 룸</span></li><li><b>LIVE DJ</b><span>분위기와 흐름을 더하는 상주 DJ 퍼포먼스</span></li><li><b>FOR EVERY GROUP</b><span>1인 방문부터 단체 모임까지 이용 가능</span></li></ul></div>
+    </div></section>`);
+}
+
 const track = document.querySelector(".gallery-track");
 const cards = [...document.querySelectorAll(".gallery-card")];
 const progress = document.querySelector(".gallery-progress span");
@@ -28,7 +37,8 @@ const prev = document.querySelector(".gallery-arrow.prev");
 const next = document.querySelector(".gallery-arrow.next");
 
 function cardStep() {
-  return cards[0].getBoundingClientRect().width + 24;
+  const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
+  return cards[0].getBoundingClientRect().width + gap;
 }
 
 function updateProgress() {
@@ -86,3 +96,9 @@ document.addEventListener("dragstart", (event) => {
 });
 
 updateProgress();
+
+const firstCaption = cards[0]?.querySelector("figcaption");
+if (firstCaption) {
+  firstCaption.querySelector("em").textContent = "MAIN ENTRANCE";
+  firstCaption.querySelector("strong").textContent = "정문 입구";
+}
