@@ -1,5 +1,35 @@
 const PHONE_NUMBER = ""; // 실제 예약 전화번호를 입력하세요. 예: 01012345678
 
+const businessData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://xn--hg3b95obmb.com/#business",
+  name: "신사 유앤미",
+  alternateName: ["유앤미 가라오케", "SHINSA YOU & ME"],
+  url: "https://xn--hg3b95obmb.com/",
+  image: [
+    "https://xn--hg3b95obmb.com/assets/entrance.webp",
+    "https://xn--hg3b95obmb.com/assets/signboard.jfif",
+    "https://xn--hg3b95obmb.com/assets/room-02.png"
+  ],
+  description: "신사역 인근에서 예약제로 운영되는 프라이빗 가라오케. 67개의 프라이빗 룸, 발렛 주차, 상주 DJ 퍼포먼스와 24시간 예약 상담을 제공합니다.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "잠원동 18-9",
+    addressLocality: "서초구",
+    addressRegion: "서울특별시",
+    addressCountry: "KR"
+  },
+  areaServed: { "@type": "City", name: "서울" },
+  sameAs: ["https://open.kakao.com/o/sMEzm3Ci", "https://t.me/UNME2027"],
+  priceRange: "₩₩₩",
+  currenciesAccepted: "KRW"
+};
+const structuredData = document.createElement("script");
+structuredData.type = "application/ld+json";
+structuredData.textContent = JSON.stringify(businessData);
+document.head.appendChild(structuredData);
+
 const phoneLinks = document.querySelectorAll(".js-phone");
 const toast = document.querySelector(".toast");
 
