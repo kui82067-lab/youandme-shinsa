@@ -1,5 +1,17 @@
 const PHONE_NUMBER = ""; // 실제 예약 전화번호를 입력하세요. 예: 01012345678
 
+const priceDate = document.querySelector("#price-date");
+if (priceDate) {
+  const parts = new Intl.DateTimeFormat("ko-KR", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(new Date());
+  const datePart = (type) => parts.find((part) => part.type === type)?.value || "";
+  priceDate.textContent = `${datePart("year")}.${datePart("month")}.${datePart("day")}`;
+}
+
 const businessData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -55,8 +67,8 @@ const introSection = document.querySelector(".intro");
 if (introSection) {
   introSection.insertAdjacentHTML("afterend", `
     <section class="karaoke-story"><div class="wrap karaoke-grid">
-      <div><p class="overline">KARAOKE EXPERIENCE</p><h2>노래와 대화가<br>자연스럽게 이어지는 시간</h2></div>
-      <div class="karaoke-copy"><p>강남권 신사역 인근의 유앤미는 독립된 룸에서 노래와 음악을 편안하게 즐기는 프라이빗 가라오케입니다. 서초구 잠원동에서 혼자 방문하는 자리부터 친구 모임, 비즈니스와 단체 회식까지 목적에 맞는 공간을 예약제로 안내합니다.</p><ul><li><b>PRIVATE KARAOKE</b><span>다른 일행과 분리된 독립형 룸</span></li><li><b>LIVE DJ</b><span>분위기와 흐름을 더하는 상주 DJ 퍼포먼스</span></li><li><b>FOR EVERY GROUP</b><span>1인 방문부터 단체 모임까지 이용 가능</span></li></ul></div>
+      <div><p class="overline">KARAOKE EXPERIENCE</p><h2>노래와 음악,<br>좋은 술이 함께하는 시간</h2></div>
+      <div class="karaoke-copy"><p>강남권 신사역 인근의 유앤미는 독립된 룸에서 노래와 음악을 즐기며, 고급 양주와 함께 여유로운 시간을 보낼 수 있는 프라이빗 가라오케입니다. 서초구 잠원동에서 1인 방문부터 친구 모임, 비즈니스와 단체 회식까지 목적과 인원에 맞는 공간을 예약제로 안내합니다.</p><ul><li><b>PRIVATE KARAOKE</b><span>다른 일행과 분리된 독립형 프라이빗 룸</span></li><li><b>PREMIUM SPIRITS</b><span>모임의 분위기에 어울리는 고급 양주 구성</span></li><li><b>LIVE DJ</b><span>분위기와 흐름을 더하는 상주 DJ 퍼포먼스</span></li><li><b>FOR EVERY GROUP</b><span>1인 방문부터 비즈니스와 단체 회식까지</span></li></ul></div>
     </div></section>`);
 }
 
